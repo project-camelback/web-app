@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>Project Camelback</title>
+</head>
+<body>
+<h1>Flatiron School</h1>
+<h2>Private Repos</h2>
+<% @client.org_repos('flatiron-school', :type => 'private').each do |repo| %>
+      <%= "<a href='https://github.com/#{repo.full_name}'>#{repo.name}</a><br>" %>
+<% end %>
+<h2>Public Repos</h2>
+<% @client.org_repos('flatiron-school', :type => 'public').each do |repo| %>
+      <%= "<a href='https://github.com/#{repo.full_name}'>#{repo.name}</a><br>" %>
+<% end %>
+</body>
+</html>
